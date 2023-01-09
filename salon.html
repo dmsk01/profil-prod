@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Мебельный салон</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230109212405" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<script src="files/aos.js?_v=20230109212405"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU&_v=20230109212405" type="text/javascript"></script>
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__top top-header">
+				<div class="header__container">
+					<div class="top-header__inner">
+						<div class="top-header__logo">
+							<img src="img/logo-small.svg" alt="Profildoors" />
+						</div>
+						<h3 class="top-header__official">Официальный дилер</h3>
+						<address class="top-header__address">
+							<span class="top-header__place">
+								<a href="salon.html">г. Екатеринбург ул. Малышева 105</a>
+							</span>
+							<a href="mailto:example@example.com" class="top-header__mail">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="#191E32" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M22 6L12 13L2 6" stroke="#191E32" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</a>
+							<a href="tel:+73452290295" class="top-header__phone">+7 345 229-02-95</a>
+						</address>
+					</div>
+				</div>
+			</div>
+			<div class="header__bottom bottom-header">
+				<div class="bottom-header__container">
+					<div class="bottom-header__inner bottom-header__inner_desktop">
+						<a href="index.html" class="bottom-header__logo">
+							<img src="img/logo.svg" alt="Profildoors" />
+						</a>
+						<nav class="bottom-header__menu menu-bottom-header">
+							<ul class="menu-bottom-header__list">
+								<li class="menu-bottom-header__item menu-bottom-header__item_trigger">
+									<div class="header-catalog">
+										<a href="doors-catalog.html" class="header-catalog__button">каталог</a>
+										<div class="header-catalog__body catalog-header">
+											<div class="catalog-header__container">
+												<ul class="catalog-header__box">
+													<li class="catalog-header__type catalog-header__type_sale">
+														<div class="catalog-sale">
+															<div class="catalog-sale__image">
+																<picture><source srcset="img/header/1.webp" type="image/webp"><img src="img/header/1.jpg" alt="Door" /></picture>
+																<span class="catalog-sale__discount">-5%</span>
+															</div>
+															<h4 class="catalog-sale__title">сКИДКИ НА ДВЕРИ СЕРИИ lk</h4>
+															<a href="#" class="catalog-sale__link">Узнать больше &gt;&gt;</a>
+														</div>
+													</li>
+													<li class="catalog-header__type type-catalog-header">
+														<h4 class="type-catalog-header__title">Каркасно-щитовые</h4>
+														<div class="type-catalog-header__body">
+															<ul class="type-catalog-header__list">
+																<li>
+																	<a href="door-series.html" class="type-catalog-header__link">Серия E</a>
+																</li>
+																<li>
+																	<a href="door-series.html" class="type-catalog-header__link">Серия LK</a>
+																</li>
+																<li>
+																	<a href="door-series.html" class="type-catalog-header__link">Серия ZN</a>
+																</li>
+																<li>
+																	<a href="door-series.html" class="type-catalog-header__link">Серия Z</a>
+																</li>
+																<li>
+																	<a href="door-series.html" class="type-catalog-header__link">Серия SMK</a>
+																</li>
+																<li>
+																	<a href="door-series.html" class="type-catalog-header__link">Серия M</a>
+																</li>
+															</ul>
+															<div class="type-catalog-header__image">
+																<picture><source srcset="img/header/2.webp" type="image/webp"><img src="img/header/2.png" alt="Door" /></picture>
+															</div>
+														</div>
+													</li>
+													<li class="catalog-header__type type-catalog-header">
+														<h4 class="type-catalog-header__title">Царговые</h4>
+														<div class="type-catalog-header__body">
+															<ul class="type-catalog-header__list">
+																<li>
+																	<a href="#" class="type-catalog-header__link">Серия U</a>
+																</li>
+																<li>
+																	<a href="#" class="type-catalog-header__link">Серия L</a>
+																</li>
+																<li>
+																	<a href="#" class="type-catalog-header__link">Серия XN</a>
+																</li>
+																<li>
+																	<a href="#" class="type-catalog-header__link">Серия X</a>
+																</li>
+															</ul>
+															<div class="type-catalog-header__image">
+																<picture><source srcset="img/header/2.webp" type="image/webp"><img src="img/header/2.png" alt="Door" /></picture>
+															</div>
+														</div>
+													</li>
+													<li class="catalog-header__type type-catalog-header">
+														<h4 class="type-catalog-header__title">Алюминиевые</h4>
+														<div class="type-catalog-header__body">
+															<ul class="type-catalog-header__list">
+																<li>
+																	<a href="#" class="type-catalog-header__link">Серия AG</a>
+																</li>
+																<li>
+																	<a href="#" class="type-catalog-header__link">Серия AGK</a>
+																</li>
+																<li>
+																	<a href="#" class="type-catalog-header__link">Серия AGP</a>
+																</li>
+																<li>
+																	<a href="#" class="type-catalog-header__link">Серия AX</a>
+																</li>
+																<li>
+																	<a href="#" class="type-catalog-header__link">Серия AV</a>
+																</li>
+																<li>
+																	<a href="#" class="type-catalog-header__link">Серия AGN</a>
+																</li>
+															</ul>
+															<div class="type-catalog-header__image">
+																<picture><source srcset="img/header/2.webp" type="image/webp"><img src="img/header/2.png" alt="Door" /></picture>
+															</div>
+														</div>
+													</li>
+													<li class="catalog-header__type type-catalog-header">
+														<h4 class="type-catalog-header__title">Скрытые</h4>
+														<div class="type-catalog-header__body">
+															<ul class="type-catalog-header__list">
+																<li>
+																	<a href="#" class="type-catalog-header__link">Серия INVISIBLE</a>
+																</li>
+																<li>
+																	<a href="#" class="type-catalog-header__link">Серия INVISIBLE REVERSE</a>
+																</li>
+																<li>
+																	<a href="#" class="type-catalog-header__link">Серия INVISIBLE INFINITY</a>
+																</li>
+																<li>
+																	<a href="#" class="type-catalog-header__link">Серия INVISIBLE INFINITY REVERSE</a>
+																</li>
+															</ul>
+															<div class="type-catalog-header__image">
+																<picture><source srcset="img/header/2.webp" type="image/webp"><img src="img/header/2.png" alt="Door" /></picture>
+															</div>
+														</div>
+													</li>
+													<li class="catalog-header__type type-catalog-header">
+														<h4 class="type-catalog-header__title">
+															<a href="accesorises-catalog.html">Фурнитура</a>
+														</h4>
+														<div class="type-catalog-header__body">
+															<ul class="type-catalog-header__list">
+																<li>
+																	<a href="#" class="type-catalog-header__link">Дверные ручки</a>
+																</li>
+																<li>
+																	<a href="#" class="type-catalog-header__link">Замки</a>
+																</li>
+																<li>
+																	<a href="#" class="type-catalog-header__link">Вся фурнитура</a>
+																</li>
+															</ul>
+														</div>
+													</li>
+													<li class="catalog-header__type type-catalog-header">
+														<h4 class="type-catalog-header__title">
+															<a href="decor-panels-catalog.html">ДЕКОРАТИВНЫЕ ПАНЕЛИ</a>
+														</h4>
+														<div class="type-catalog-header__body">
+															<ul class="type-catalog-header__list">
+																<li>
+																	<a href="#" class="type-catalog-header__link">Стеновые панели</a>
+																</li>
+																<li>
+																	<a href="#" class="type-catalog-header__link">Декоративная рейка</a>
+																</li>
+																<li>
+																	<a href="#" class="type-catalog-header__link">Стеновые арт-панели</a>
+																</li>
+															</ul>
+														</div>
+													</li>
+													<li class="catalog-header__type type-catalog-header">
+														<h4 class="type-catalog-header__title">
+															<a href="door-frame-catalog.html">ДВЕРНЫЕ КОРОБА</a>
+														</h4>
+														<div class="type-catalog-header__body">
+															<ul class="type-catalog-header__list">
+																<li>
+																	<a href="#" class="type-catalog-header__link">Короб IntegAL</a>
+																</li>
+																<li>
+																	<a href="#" class="type-catalog-header__link">Моноблок Export, Reverse</a>
+																</li>
+																<li>
+																	<a href="#" class="type-catalog-header__link">Короб SLIM AL</a>
+																</li>
+															</ul>
+														</div>
+													</li>
+													<li class="catalog-header__type type-catalog-header">
+														<h4 class="type-catalog-header__title">
+															<a href="alum-partitions-catalog.html">АЛЮМИНИЕВЫЕ ПЕРЕГОРОДКИ</a>
+														</h4>
+														<div class="type-catalog-header__body">
+															<ul class="type-catalog-header__list">
+																<li>
+																	<a href="#" class="type-catalog-header__link">Классическая раздвижная система</a>
+																</li>
+																<li>
+																	<a href="#" class="type-catalog-header__link">Раздвижная система Каскад</a>
+																</li>
+																<li>
+																	<a href="#" class="type-catalog-header__link">Алюминиевые конструкции с фрамугами</a>
+																</li>
+															</ul>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="menu-bottom-header__item">
+									<a href="open-systems-catalog.html" class="menu-bottom-header__link">Cистемы открывания</a>
+								</li>
+								<li class="menu-bottom-header__item">
+									<a href="service.html" class="menu-bottom-header__link">Cервис</a>
+								</li>
+								<li class="menu-bottom-header__item">
+									<a href="about.html" class="menu-bottom-header__link">О КОМПАНИИ</a>
+								</li>
+								<li class="menu-bottom-header__item">
+									<a href="discounts.html" class="menu-bottom-header__link">Акции</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="bottom-header__callback">
+							<button type="button" class="bottom-header__callback btn btn_outlined btn_white">Заказать звонок</button>
+						</div>
+					</div>
+					<div class="bottom-header__inner bottom-header__inner_mobile mobile-bottom-header">
+						<div class="mobile-bottom-header__menu">
+							<button type="button" class="mobile-bottom-header__button mobile-bottom-header__button_open">меню</button>
+							<div class="mobile-bottom-header__menu menu-mobile">
+								<div class="menu-mobile__close">
+									<button class="mobile-bottom-header__button mobile-bottom-header__button_close" type="button">
+										<img src="img/icons/close.svg" alt="close button" />
+									</button>
+								</div>
+								<div class="menu-mobile__body">
+									<ul data-spollers data-one-spoller class="menu-mobile__spollers spollers">
+										<li class="spollers__item">
+											<button type="button" data-spoller class="spollers__title">главная</button>
+											<div class="spollers__body">
+												<ul class="spollers-menu-list">
+													<li class="spollers-menu-list__item">
+														<a href="open-systems-catalog.html" class="spollers-menu-list__link">Cистемы открывания</a>
+													</li>
+													<li class="spollers-menu-list__item">
+														<a href="service.html" class="spollers-menu-list__link">Cервис</a>
+													</li>
+													<li class="spollers-menu-list__item">
+														<a href="about.html" class="spollers-menu-list__link">О КОМПАНИИ</a>
+													</li>
+													<li class="spollers-menu-list__item">
+														<a href="discounts.html" class="spollers-menu-list__link">Акции</a>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="spollers__item">
+											<button type="button" data-spoller class="spollers__title">межкомнатные Двери</button>
+											<div class="spollers__body">
+												<ul class="spollers-menu-list">
+													<li class="spollers-menu-list__item">
+														<a href="#" class="spollers-menu-list__link">Каркасно-щитовые</a>
+													</li>
+													<li class="spollers-menu-list__item">
+														<a href="#" class="spollers-menu-list__link">Царговые</a>
+													</li>
+													<li class="spollers-menu-list__item">
+														<a href="#" class="spollers-menu-list__link">Алюминиевые</a>
+													</li>
+													<li class="spollers-menu-list__item">
+														<a href="#" class="spollers-menu-list__link">Скрытые</a>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="spollers__item">
+											<button type="button" data-spoller class="spollers__title">Системы открывания</button>
+											<div class="spollers__body">
+												<ul class="spollers-menu-list">
+													<li class="spollers-menu-list__item">
+														<a href="#" class="spollers-menu-list__link">Система COMPACK</a>
+													</li>
+													<li class="spollers-menu-list__item">
+														<a href="#" class="spollers-menu-list__link">Система MAGIC</a>
+													</li>
+													<li class="spollers-menu-list__item">
+														<a href="#" class="spollers-menu-list__link">Система MAGIC UNIT</a>
+													</li>
+													<li class="spollers-menu-list__item">
+														<a href="#" class="spollers-menu-list__link">Система ПЕНАЛ</a>
+													</li>
+													<li class="spollers-menu-list__item">
+														<a href="#" class="spollers-menu-list__link">Система КУПЕ</a>
+													</li>
+													<li class="spollers-menu-list__item">
+														<a href="#" class="spollers-menu-list__link">Система КНИЖКА</a>
+													</li>
+													<li class="spollers-menu-list__item">
+														<a href="#" class="spollers-menu-list__link">Система DIVA AIR</a>
+													</li>
+													<li class="spollers-menu-list__item">
+														<a href="#" class="spollers-menu-list__link">Поворотная система</a>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="spollers__item">
+											<button type="button" data-spoller class="spollers__title">фурнитура</button>
+											<div class="spollers__body">
+												<ul class="spollers-menu-list">
+													<li class="spollers-menu-list__item">
+														<a href="accesorises-catalog.html" class="spollers-menu-list__link">Дверные ручки</a>
+													</li>
+													<li class="spollers-menu-list__item">
+														<a href="accesorises-catalog.html" class="spollers-menu-list__link">Замки</a>
+													</li>
+													<li class="spollers-menu-list__item">
+														<a href="accesorises-catalog.html" class="spollers-menu-list__link">Петли</a>
+													</li>
+													<li class="spollers-menu-list__item">
+														<a href="accesorises-catalog.html" class="spollers-menu-list__link">Ригель</a>
+													</li>
+													<li class="spollers-menu-list__item">
+														<a href="accesorises-catalog.html" class="spollers-menu-list__link">Вся фурнитура</a>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="spollers__item">
+											<button type="button" data-spoller class="spollers__title">декоративные панели</button>
+											<div class="spollers__body">
+												<ul class="spollers-menu-list">
+													<li class="spollers-menu-list__item">
+														<a href="#" class="spollers-menu-list__link">Стеновые панели</a>
+													</li>
+													<li class="spollers-menu-list__item">
+														<a href="#" class="spollers-menu-list__link">Декоративная рейка</a>
+													</li>
+													<li class="spollers-menu-list__item">
+														<a href="#" class="spollers-menu-list__link">Стеновые арт-панели</a>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="spollers__item">
+											<button type="button" data-spoller class="spollers__title">алюминиевые перегородки</button>
+											<div class="spollers__body">
+												<ul class="spollers-menu-list">
+													<li class="spollers-menu-list__item">
+														<a href="#" class="spollers-menu-list__link">Классическая раздвижная система</a>
+													</li>
+													<li class="spollers-menu-list__item">
+														<a href="#" class="spollers-menu-list__link">Раздвижная система Каскад</a>
+													</li>
+													<li class="spollers-menu-list__item">
+														<a href="#" class="spollers-menu-list__link">Алюминиевые конструкции с фрамугами</a>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="spollers__item">
+											<button type="button" data-spoller class="spollers__title">дверные короба</button>
+											<div class="spollers__body">
+												<ul class="spollers-menu-list">
+													<li class="spollers-menu-list__item">
+														<a href="#" class="spollers-menu-list__link">Короб IntegAL</a>
+													</li>
+													<li class="spollers-menu-list__item">
+														<a href="#" class="spollers-menu-list__link">Моноблок Export, Reverse</a>
+													</li>
+													<li class="spollers-menu-list__item">
+														<a href="#" class="spollers-menu-list__link">Короб SLIM AL</a>
+													</li>
+												</ul>
+											</div>
+										</li>
+										<li class="spollers__item spollers__item_sale">
+											<a href="discounts.html" class="spollers__title">акции</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<ul class="mobile-bottom-header__contacts">
+							<li class="mobile-bottom-header__contact">
+								<a href="#">
+									<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect x="0.5" y="0.5" width="29" height="29" rx="14.5" fill="#F0F0F0" />
+										<g clip-path="url(#clip0_665_1759)">
+											<path d="M22.5 13.3333C22.5 19.1666 15 24.1666 15 24.1666C15 24.1666 7.5 19.1666 7.5 13.3333C7.5 11.3442 8.29018 9.43653 9.6967 8.03001C11.1032 6.62349 13.0109 5.83331 15 5.83331C16.9891 5.83331 18.8968 6.62349 20.3033 8.03001C21.7098 9.43653 22.5 11.3442 22.5 13.3333Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+											<path d="M15 15.8333C16.3807 15.8333 17.5 14.714 17.5 13.3333C17.5 11.9526 16.3807 10.8333 15 10.8333C13.6193 10.8333 12.5 11.9526 12.5 13.3333C12.5 14.714 13.6193 15.8333 15 15.8333Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+										</g>
+										<rect x="0.5" y="0.5" width="29" height="29" rx="14.5" stroke="#F0F0F0" />
+										<defs>
+											<clipPath id="clip0_665_1759">
+												<rect width="20" height="20" fill="white" transform="translate(5 5)" />
+											</clipPath>
+										</defs>
+									</svg>
+								</a>
+							</li>
+							<li class="mobile-bottom-header__contacts">
+								<a href="#">
+									<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect x="0.5" y="0.5" width="29" height="29" rx="14.5" fill="#F0F0F0" />
+										<g clip-path="url(#clip0_663_1754)">
+											<path d="M23.3332 19.1V21.6C23.3341 21.8321 23.2866 22.0618 23.1936 22.2744C23.1006 22.4871 22.9643 22.678 22.7933 22.8349C22.6222 22.9918 22.4203 23.1112 22.2005 23.1856C21.9806 23.2599 21.7477 23.2875 21.5165 23.2666C18.9522 22.988 16.489 22.1118 14.3249 20.7083C12.3114 19.4289 10.6043 17.7218 9.32486 15.7083C7.91651 13.5343 7.04007 11.0591 6.76653 8.48331C6.7457 8.25287 6.77309 8.02061 6.84695 7.80133C6.9208 7.58205 7.03951 7.38055 7.1955 7.20966C7.3515 7.03877 7.54137 6.90224 7.75302 6.80875C7.96468 6.71526 8.19348 6.66686 8.42486 6.66665H10.9249C11.3293 6.66267 11.7214 6.80588 12.028 7.06959C12.3346 7.3333 12.5349 7.69952 12.5915 8.09998C12.697 8.90003 12.8927 9.68558 13.1749 10.4416C13.287 10.7399 13.3112 11.0641 13.2448 11.3757C13.1783 11.6874 13.0239 11.9734 12.7999 12.2L11.7415 13.2583C12.9278 15.3446 14.6552 17.072 16.7415 18.2583L17.7999 17.2C18.0264 16.9759 18.3125 16.8215 18.6241 16.7551C18.9358 16.6886 19.2599 16.7129 19.5582 16.825C20.3143 17.1071 21.0998 17.3028 21.8999 17.4083C22.3047 17.4654 22.6744 17.6693 22.9386 17.9812C23.2029 18.2931 23.3433 18.6913 23.3332 19.1Z" stroke="#191E32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+										</g>
+										<rect x="0.5" y="0.5" width="29" height="29" rx="14.5" stroke="#F0F0F0" />
+										<defs>
+											<clipPath id="clip0_663_1754">
+												<rect width="20" height="20" fill="white" transform="translate(5 5)" />
+											</clipPath>
+										</defs>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="page salon-page">
+			<section class="salon-page__hero hero-salon">
+				<div class="hero-salon__container">
+					<div class="hero-salon__row">
+						<div data-aos="fade-right" data-aos-delay="0" data-aos-duration="1000" class="hero-salon__col">
+							<h1 class="hero-salon__title title-h1">Мебельный салон ProfilDoors Design</h1>
+						</div>
+						<div data-aos="fade-left" data-aos-delay="0" data-aos-duration="1000" class="hero-salon__col">
+							<div class="hero-salon__image">
+								<picture><source srcset="img/salon/hero.webp" type="image/webp"><img src="img/salon/hero.png" alt="Salon reception" /></picture>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="salon-page__contacts">
+				<section class="contacts-section">
+					<div class="contacts-section__container">
+						<div class="contacts-section__row">
+							<div class="contacts-section__map">
+								<div class="contacts-section__wrap">
+									<div id="map" style="width: 100%; height: 100%"></div>
+								</div>
+							</div>
+							<address class="contacts-section__info">
+								<h2 class="contacts-section__title bebas-title">Контакты</h2>
+								<a href="tel:+73452290295" class="contacts-section__phone">+7 3452 29-02-95</a>
+								<p class="contacts-section__address text">г. Екатеринбург ул. Малышева 105</p>
+								<div class="contacts-section__schedule">
+									<div class="contacts-section__line">
+										<span class="contacts-section__day">пн-пт</span>
+										<span class="contacts-section__time">09.00–20.00</span>
+									</div>
+									<div class="contacts-section__line">
+										<span class="contacts-section__day">сб-вс</span>
+										<span class="contacts-section__time">09.00–18.00</span>
+									</div>
+								</div>
+								<a href="#" class="contacts-section__link contacts-section__link_desktop btn btn_outlined btn_middle">Написать специалисту</a>
+							</address>
+						</div>
+						<a href="#" class="contacts-section__link contacts-section__link_mobile btn btn_middle">Написать специалисту</a>
+					</div>
+				</section>
+			</div>
+			<section class="salon-page__gallery salon-gallery">
+				<div class="salon-gallery__container">
+					<h3 class="salon-gallery__title title-h3">Фотогалерея</h3>
+					<ul data-gallery class="salon-gallery__body">
+						<li data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" data-src="img/salon/gallery/01.jpg" class="salon-gallery__picture salon-gallery__picture_contain include-in-gallery">
+							<div class="salon-gallery__image">
+								<picture><source srcset="img/salon/gallery/01.webp" type="image/webp"><img src="img/salon/gallery/01.jpg" alt="Salon gallery" /></picture>
+							</div>
+						</li>
+						<li data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" data-src="img/salon/gallery/02.png" class="salon-gallery__picture include-in-gallery">
+							<div class="salon-gallery__image">
+								<picture><source srcset="img/salon/gallery/02.webp" type="image/webp"><img src="img/salon/gallery/02.png" alt="Salon gallery" /></picture>
+							</div>
+						</li>
+						<li data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" data-src="img/salon/gallery/03.png" class="salon-gallery__picture include-in-gallery">
+							<div class="salon-gallery__image">
+								<picture><source srcset="img/salon/gallery/03.webp" type="image/webp"><img src="img/salon/gallery/03.png" alt="Salon gallery" /></picture>
+							</div>
+						</li>
+						<li data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" data-src="img/salon/gallery/04.png" class="salon-gallery__picture include-in-gallery">
+							<div class="salon-gallery__image">
+								<picture><source srcset="img/salon/gallery/04.webp" type="image/webp"><img src="img/salon/gallery/04.png" alt="Salon gallery" /></picture>
+							</div>
+						</li>
+						<li data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" data-src="img/salon/gallery/05.png" class="salon-gallery__picture include-in-gallery">
+							<div class="salon-gallery__image">
+								<picture><source srcset="img/salon/gallery/05.webp" type="image/webp"><img src="img/salon/gallery/05.png" alt="Salon gallery" /></picture>
+							</div>
+						</li>
+						<li data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" data-src="img/salon/gallery/06.png" class="salon-gallery__picture include-in-gallery">
+							<div class="salon-gallery__image">
+								<picture><source srcset="img/salon/gallery/06.webp" type="image/webp"><img src="img/salon/gallery/06.png" alt="Salon gallery" /></picture>
+							</div>
+						</li>
+						<li data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" data-src="img/salon/gallery/07.png" class="salon-gallery__picture include-in-gallery">
+							<div class="salon-gallery__image">
+								<picture><source srcset="img/salon/gallery/07.webp" type="image/webp"><img src="img/salon/gallery/07.png" alt="Salon gallery" /></picture>
+							</div>
+						</li>
+						<li data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" data-src="img/salon/gallery/08.png" class="salon-gallery__picture include-in-gallery">
+							<div class="salon-gallery__image">
+								<picture><source srcset="img/salon/gallery/08.webp" type="image/webp"><img src="img/salon/gallery/08.png" alt="Salon gallery" /></picture>
+							</div>
+						</li>
+						<li data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" data-src="img/salon/gallery/09.png" class="salon-gallery__picture include-in-gallery">
+							<div class="salon-gallery__image">
+								<picture><source srcset="img/salon/gallery/09.webp" type="image/webp"><img src="img/salon/gallery/09.png" alt="Salon gallery" /></picture>
+							</div>
+						</li>
+						<li data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" data-src="img/salon/gallery/10.png" class="salon-gallery__picture include-in-gallery">
+							<div class="salon-gallery__image">
+								<picture><source srcset="img/salon/gallery/10.webp" type="image/webp"><img src="img/salon/gallery/10.png" alt="Salon gallery" /></picture>
+							</div>
+						</li>
+						<li data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" data-src="img/salon/gallery/11.png" class="salon-gallery__picture salon-gallery__picture_right include-in-gallery">
+							<div class="salon-gallery__image salon-gallery__image_wide">
+								<picture><source srcset="img/salon/gallery/11.webp" type="image/webp"><img src="img/salon/gallery/11.png" alt="Salon gallery" /></picture>
+							</div>
+						</li>
+						<li data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" data-src="img/salon/gallery/12.png" class="salon-gallery__picture salon-gallery__picture_left include-in-gallery">
+							<div class="salon-gallery__image salon-gallery__image_wide">
+								<picture><source srcset="img/salon/gallery/12.webp" type="image/webp"><img src="img/salon/gallery/12.png" alt="Salon gallery" /></picture>
+							</div>
+						</li>
+						<li data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" data-src="img/salon/gallery/13.png" class="salon-gallery__picture include-in-gallery">
+							<div class="salon-gallery__image">
+								<picture><source srcset="img/salon/gallery/13.webp" type="image/webp"><img src="img/salon/gallery/13.png" alt="Salon gallery" /></picture>
+							</div>
+						</li>
+						<li data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" data-src="img/salon/gallery/13-1.png" class="salon-gallery__picture include-in-gallery">
+							<div class="salon-gallery__image">
+								<picture><source srcset="img/salon/gallery/13-1.webp" type="image/webp"><img src="img/salon/gallery/13-1.png" alt="Salon gallery" /></picture>
+							</div>
+						</li>
+						<li data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" data-src="img/salon/gallery/14.png" class="salon-gallery__picture include-in-gallery">
+							<div class="salon-gallery__image">
+								<picture><source srcset="img/salon/gallery/14.webp" type="image/webp"><img src="img/salon/gallery/14.png" alt="Salon gallery" /></picture>
+							</div>
+						</li>
+						<li data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" data-src="img/salon/gallery/15.png" class="salon-gallery__picture include-in-gallery">
+							<div class="salon-gallery__image">
+								<picture><source srcset="img/salon/gallery/15.webp" type="image/webp"><img src="img/salon/gallery/15.png" alt="Salon gallery" /></picture>
+							</div>
+						</li>
+						<li data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" class="salon-gallery__picture salon-gallery__picture_right salon-gallery__picture_form">
+							<div class="salon-gallery__form form-gallery">
+								<form class="form-gallery__form gallery-callback-form">
+									<h2 class="gallery-callback-form__title title-h3">Поможем выбрать дверь</h2>
+									<div class="gallery-callback-form__box">
+										<label class="gallery-callback-form__name">
+											<span>Имя</span>
+											<input name="name" type="text" class="gallery-callback-form__input" required />
+										</label>
+										<label class="gallery-callback-form__name">
+											<span>Телефон</span>
+											<input name="phone" type="tel" class="gallery-callback-form__input" required />
+										</label>
+										<label class="gallery-callback-form__comment">
+											<span>Комментарий</span>
+											<textarea name="comment" type="textarea" class="gallery-callback-form__input" required></textarea>
+										</label>
+									</div>
+									<div class="gallery-callback-form__bottom">
+										<p class="gallery-callback-form__agreement">Нажимая кнопку «Заказать консультацию», я даю своё согласие на обработку персональных данных</p>
+										<button type="submit" class="gallery-callback-form__submit btn btn_filled-white">Заказать консультацию</button>
+									</div>
+								</form>
+							</div>
+						</li>
+						<li data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" data-src="img/salon/gallery/16.png" class="salon-gallery__picture include-in-gallery">
+							<div class="salon-gallery__image">
+								<picture><source srcset="img/salon/gallery/16.webp" type="image/webp"><img src="img/salon/gallery/16.png" alt="Salon gallery" /></picture>
+							</div>
+						</li>
+						<li data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" data-src="img/salon/gallery/17.png" class="salon-gallery__picture include-in-gallery">
+							<div class="salon-gallery__image">
+								<picture><source srcset="img/salon/gallery/17.webp" type="image/webp"><img src="img/salon/gallery/17.png" alt="Salon gallery" /></picture>
+							</div>
+						</li>
+						<li data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" data-src="img/salon/gallery/18.png" class="salon-gallery__picture include-in-gallery">
+							<div class="salon-gallery__image">
+								<picture><source srcset="img/salon/gallery/18.webp" type="image/webp"><img src="img/salon/gallery/18.png" alt="Salon gallery" /></picture>
+							</div>
+						</li>
+						<li data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" data-src="img/salon/gallery/19.png" class="salon-gallery__picture include-in-gallery">
+							<div class="salon-gallery__image">
+								<picture><source srcset="img/salon/gallery/19.webp" type="image/webp"><img src="img/salon/gallery/19.png" alt="Salon gallery" /></picture>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<div class="open-systems-page__scroll-to-top">
+				<div class="open-systems-page__container">
+					<button type="button" class="scroll-to-top">наверх ↑</button>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__top">
+					<div class="footer__box">
+						<div class="footer__contacts">
+							<div class="footer__logo">
+								<img src="img/logo.svg" alt="Profildoors logo" />
+							</div>
+							<a href="tel:+73452290295" class="footer__phone">+7 3452 29-02-95</a>
+							<p class="footer__address text text_white">г. Екатеринбург ул. Малышева 105</p>
+						</div>
+						<nav class="footer__menu">
+							<div data-spollers="768,max" class="footer__spollers spollers-footer">
+								<div class="spollers-footer__item spollers-footer__item_1">
+									<button type="button" data-spoller class="spollers-footer__title">О компании</button>
+									<div class="spollers-footer__body">
+										<ul class="spollers-footer__list">
+											<li class="spollers-footer__item-list">
+												<a href="about.html" class="spollers-footer__link">История компании</a>
+											</li>
+											<li class="spollers-footer__item-list">
+												<a href="tv-show-page.html" class="spollers-footer__link">ТВ-шоу</a>
+											</li>
+											<li class="spollers-footer__item-list">
+												<a href="discounts.html" class="spollers-footer__link">Акции</a>
+											</li>
+											<li class="spollers-footer__item-list">
+												<a href="salon.html" class="spollers-footer__link">Дизайнерам</a>
+											</li>
+											<li class="spollers-footer__item-list">
+												<a href="about.html#sertificates" class="spollers-footer__link">Сертификаты соответствия</a>
+											</li>
+											<li class="spollers-footer__item-list">
+												<a href="service.html#delivery" class="spollers-footer__link">Доставка и монтаж</a>
+											</li>
+											<li class="spollers-footer__item-list">
+												<a href="service.html#warranty" class="spollers-footer__link">Гарантийное обслуживание</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="spollers-footer__item spollers-footer__item_2">
+									<button type="button" data-spoller class="spollers-footer__title">Двери</button>
+									<div class="spollers-footer__body">
+										<ul class="spollers-footer__list">
+											<li class="spollers-footer__item-list">
+												<a href="#" class="spollers-footer__link">Каркасно-щитовые</a>
+											</li>
+											<li class="spollers-footer__item-list">
+												<a href="#" class="spollers-footer__link">Царговые</a>
+											</li>
+											<li class="spollers-footer__item-list">
+												<a href="#" class="spollers-footer__link">Алюминиевые</a>
+											</li>
+											<li class="spollers-footer__item-list">
+												<a href="#" class="spollers-footer__link">Скрытые</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="spollers-footer__item spollers-footer__item_3">
+									<button type="button" data-spoller class="spollers-footer__title">ДЕКОРАТИВНЫЕ ПАНЕЛИ</button>
+									<div class="spollers-footer__body">
+										<ul class="spollers-footer__list">
+											<li class="spollers-footer__item-list">
+												<a href="#" class="spollers-footer__link">Стеновые панели</a>
+											</li>
+											<li class="spollers-footer__item-list">
+												<a href="#" class="spollers-footer__link">Декоративная рейка</a>
+											</li>
+											<li class="spollers-footer__item-list">
+												<a href="#" class="spollers-footer__link">Стеновые арт-панели</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="spollers-footer__item spollers-footer__item_4">
+									<button type="button" data-spoller class="spollers-footer__title">Фурнитура</button>
+									<div class="spollers-footer__body">
+										<ul class="spollers-footer__list">
+											<li class="spollers-footer__item-list">
+												<a href="#" class="spollers-footer__link">Дверные ручки</a>
+											</li>
+											<li class="spollers-footer__item-list">
+												<a href="#" class="spollers-footer__link">Замки</a>
+											</li>
+											<li class="spollers-footer__item-list">
+												<a href="#" class="spollers-footer__link">Петли</a>
+											</li>
+											<li class="spollers-footer__item-list">
+												<a href="#" class="spollers-footer__link">Ригель</a>
+											</li>
+											<li class="spollers-footer__item-list">
+												<a href="#" class="spollers-footer__link">Вся фурнитура</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="spollers-footer__item spollers-footer__item_5">
+									<button type="button" data-spoller class="spollers-footer__title">Системы</button>
+									<div class="spollers-footer__body">
+										<ul class="spollers-footer__list">
+											<li class="spollers-footer__item-list">
+												<a href="#" class="spollers-footer__link">Система COMPACK</a>
+											</li>
+											<li class="spollers-footer__item-list">
+												<a href="#" class="spollers-footer__link">Система MAGIC</a>
+											</li>
+											<li class="spollers-footer__item-list">
+												<a href="#" class="spollers-footer__link">Система MAGIC UNIT</a>
+											</li>
+											<li class="spollers-footer__item-list">
+												<a href="#" class="spollers-footer__link">Система ПЕНАЛ</a>
+											</li>
+											<li class="spollers-footer__item-list">
+												<a href="#" class="spollers-footer__link">Система КУПЕ</a>
+											</li>
+											<li class="spollers-footer__item-list">
+												<a href="#" class="spollers-footer__link">Система КНИЖКА</a>
+											</li>
+											<li class="spollers-footer__item-list">
+												<a href="#" class="spollers-footer__link">Система DIVA AIR</a>
+											</li>
+											<li class="spollers-footer__item-list">
+												<a href="#" class="spollers-footer__link">Поворотная система</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="spollers-footer__item spollers-footer__item_6">
+									<button type="button" data-spoller class="spollers-footer__title">АЛЮМИНИЕВЫЕ ПЕРЕГОРОДКИ</button>
+									<div class="spollers-footer__body">
+										<ul class="spollers-footer__list">
+											<li class="spollers-footer__item-list">
+												<a href="#" class="spollers-footer__link">Классическая раздвижная система</a>
+											</li>
+											<li class="spollers-footer__item-list">
+												<a href="#" class="spollers-footer__link">Раздвижная система Каскад</a>
+											</li>
+											<li class="spollers-footer__item-list">
+												<a href="#" class="spollers-footer__link">Алюминиевые конструкции с фрамугами</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="spollers-footer__item spollers-footer__item_7">
+									<button type="button" data-spoller class="spollers-footer__title">ДВЕРНЫЕ КОРОБА</button>
+									<div class="spollers-footer__body">
+										<ul class="spollers-footer__list">
+											<li class="spollers-footer__item-list">
+												<a href="#" class="spollers-footer__link">Короб IntegAL</a>
+											</li>
+											<li class="spollers-footer__item-list">
+												<a href="#" class="spollers-footer__link">Моноблок Export, Reverse</a>
+											</li>
+											<li class="spollers-footer__item-list">
+												<a href="#" class="spollers-footer__link">Короб SLIM AL</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</nav>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<span class="footer__firm text text_white">ООО «Profildoors»</span>
+					<a href="#" class="footer__policy text text_white">Политика конфиденциальности</a>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+	<!-- 
+<div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+			</div>
+		</div>
+	</div>
+</div>
+ -->
+	<script src="js/app.min.js?_v=20230109212405"></script>
+
+</body>
+
+</html>
