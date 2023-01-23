@@ -8948,10 +8948,13 @@
                     prevEl: `${parentBlock} .navigation-slider-block__arrow_left`,
                     nextEl: `${parentBlock} .navigation-slider-block__arrow_right`
                 },
-                breakpoints: breakpointsObj
+                breakpoints: breakpointsObj,
+                on: {}
             });
             const totalSlide = setTotalSlides(parentBlock);
-            slider.on("slideChange", handleSlideChange(parentBlock, slider, totalSlide));
+            slider.on("transitionStart", (() => {
+                handleSlideChange(parentBlock, slider, totalSlide);
+            }));
         }
         function createImgSlider() {
             if (document.querySelector(".hero-compose-panels-page .img-door .swiper")) {
@@ -9153,8 +9156,7 @@
                 }
             }
         }
-        window.addEventListener("load", (function(e) {
-            let vw = Math.max(document.documentElement.clientWidth);
+        window.addEventListener("load", (function() {
             if (document.querySelector(".other-doors-sl")) createSlider(".other-doors-sl", 6, 35, {
                 320: {
                     slidesPerView: 2,
@@ -9195,199 +9197,50 @@
                     spaceBetween: 35
                 }
             });
-            if (vw >= 768 && document.querySelector(".slider-home-section__slider")) {
-                const homeSlider = new core(".slider-home-section__slider", {
-                    modules: [ Navigation, Pagination ],
-                    observer: true,
-                    observeParents: true,
-                    slidesPerView: 4,
-                    slidesPerGroup: 4,
-                    spaceBetween: 0,
-                    autoHeight: true,
-                    speed: 800,
-                    pagination: {
-                        el: ".slider-home-section__fraction",
-                        type: "bullets",
-                        clickable: true
-                    },
-                    navigation: {
-                        prevEl: ".slider-home-section__arrow_left",
-                        nextEl: ".slider-home-section__arrow_right"
-                    },
-                    on: {}
-                });
-                let totalSlide = document.querySelectorAll(".slider-home-section__slider .swiper-slide").length;
-                let totalSlidesElement = document.querySelector(".slider-home-section__quantity_total");
-                let tdx = totalSlide < 10 ? "0" + totalSlide : totalSlide;
-                totalSlidesElement.innerHTML = tdx;
-                homeSlider.on("slideChange", (function() {
-                    let fragment = document.querySelector(".slider-home-section__quantity_current");
-                    let current = homeSlider.realIndex + 1;
-                    if (current > totalSlide) current = 1;
-                    let idx = current < 10 ? "0" + current : current;
-                    fragment.innerHTML = idx;
-                }));
-            }
-            if (document.querySelector(".types-alum-slider_invisible .swiper")) {
-                const homeSlider = new core(".types-alum-slider_invisible .swiper", {
-                    modules: [ Navigation, Pagination ],
-                    slidesPerView: 5,
-                    spaceBetween: 30,
-                    spaceBetween: 0,
-                    autoHeight: true,
-                    speed: 800,
-                    pagination: {
-                        el: ".types-alum-slider_invisible .types-alum-slider__fraction",
-                        type: "bullets",
-                        clickable: true
-                    },
-                    navigation: {
-                        prevEl: ".types-alum-slider_invisible .types-alum-slider__arrow_left",
-                        nextEl: ".types-alum-slider_invisible .types-alum-slider__arrow_right"
-                    },
-                    breakpoints: {
-                        320: {
-                            slidesPerView: 1,
-                            spaceBetween: 0,
-                            autoHeight: true
-                        },
-                        768: {
-                            slidesPerView: 5,
-                            spaceBetween: 20
-                        },
-                        992: {
-                            spaceBetween: 20
-                        },
-                        1200: {
-                            spaceBetween: 30
-                        }
-                    },
-                    on: {}
-                });
-                let totalSlide = document.querySelectorAll(".types-alum-slider_invisible .swiper-slide").length;
-                let totalSlidesElement = document.querySelector(".types-alum-slider_invisible .types-alum-slider__quantity_total");
-                let tdx = totalSlide < 10 ? "0" + totalSlide : totalSlide;
-                totalSlidesElement.innerHTML = tdx;
-                homeSlider.on("slideChange", (function() {
-                    let fragment = document.querySelector(".types-alum-slider_invisible .types-alum-slider__quantity_current");
-                    let current = homeSlider.realIndex + 1;
-                    if (current > totalSlide) current = 1;
-                    let idx = current < 10 ? "0" + current : current;
-                    fragment.innerHTML = idx;
-                }));
-            }
-            if (document.querySelector(".types-alum-slider_slim .swiper")) {
-                const homeSlider = new core(".types-alum-slider_slim .swiper", {
-                    modules: [ Navigation, Pagination ],
-                    slidesPerView: 5,
-                    spaceBetween: 30,
-                    spaceBetween: 0,
-                    autoHeight: true,
-                    speed: 800,
-                    pagination: {
-                        el: ".types-alum-slider_slim .types-alum-slider__fraction",
-                        type: "bullets",
-                        clickable: true
-                    },
-                    navigation: {
-                        prevEl: ".types-alum-slider_slim .types-alum-slider__arrow_left",
-                        nextEl: ".types-alum-slider_slim .types-alum-slider__arrow_right"
-                    },
-                    breakpoints: {
-                        320: {
-                            slidesPerView: 1,
-                            spaceBetween: 0,
-                            autoHeight: true
-                        },
-                        768: {
-                            slidesPerView: 5,
-                            spaceBetween: 20
-                        },
-                        992: {
-                            spaceBetween: 20
-                        },
-                        1200: {
-                            spaceBetween: 30
-                        }
-                    },
-                    on: {}
-                });
-                let totalSlide = document.querySelectorAll(".types-alum-slider_slim .swiper-slide").length;
-                let totalSlidesElement = document.querySelector(".types-alum-slider_slim .types-alum-slider__quantity_total");
-                let tdx = totalSlide < 10 ? "0" + totalSlide : totalSlide;
-                totalSlidesElement.innerHTML = tdx;
-                homeSlider.on("slideChange", (function() {
-                    let fragment = document.querySelector(".types-alum-slider_slim .types-alum-slider__quantity_current");
-                    let current = homeSlider.realIndex + 1;
-                    if (current > totalSlide) current = 1;
-                    let idx = current < 10 ? "0" + current : current;
-                    fragment.innerHTML = idx;
-                }));
-            }
-            if (document.querySelector(".tv-proj-description__slider.swiper")) {
-                const homeSlider = new core(".tv-proj-description__slider.swiper", {
-                    modules: [ Navigation, Pagination ],
+            if (document.querySelector(".tv-proj-description")) createSlider(".tv-proj-description", 1, 0, {});
+            if (document.querySelector(".variants-decor-page") && window.innerWidth <= 768) createSlider(".variants-decor-page", 1, 10, {});
+            if (document.querySelector(".slider-home-section") && window.innerWidth >= 768) createSlider(".slider-home-section", 4, 0, {});
+            if (document.querySelector(".types-alum-slider_invisible")) createSlider(".types-alum-slider_invisible", 5, 30, {
+                320: {
                     slidesPerView: 1,
                     spaceBetween: 0,
-                    autoHeight: true,
-                    speed: 800,
-                    pagination: {
-                        el: ".tv-proj-description__navigation .tv-proj-description__fraction",
-                        type: "bullets",
-                        clickable: true
-                    },
-                    navigation: {
-                        prevEl: ".tv-proj-description__navigation .tv-proj-description__arrow_left",
-                        nextEl: ".tv-proj-description__navigation .tv-proj-description__arrow_right"
-                    },
-                    on: {}
-                });
-                let totalSlide = document.querySelectorAll(".tv-proj-description__slider .swiper-slide").length;
-                let totalSlidesElement = document.querySelector(".tv-proj-description__paggination .tv-proj-description__quantity_total");
-                let tdx = totalSlide < 10 ? "0" + totalSlide : totalSlide;
-                totalSlidesElement.innerHTML = tdx;
-                homeSlider.on("slideChange", (function() {
-                    let fragment = document.querySelector(".tv-proj-description__paggination .tv-proj-description__quantity_current");
-                    let current = homeSlider.realIndex + 1;
-                    if (current > totalSlide) current = 1;
-                    let idx = current < 10 ? "0" + current : current;
-                    fragment.innerHTML = idx;
-                }));
-            }
-            if (document.querySelector(".variants-decor-page .swiper") && window.innerWidth <= 768) {
-                const homeSlider = new core(".variants-decor-page .swiper", {
-                    modules: [ Navigation, Pagination ],
+                    autoHeight: true
+                },
+                768: {
+                    slidesPerView: 5,
+                    spaceBetween: 20
+                },
+                992: {
+                    spaceBetween: 20
+                },
+                1200: {
+                    spaceBetween: 30
+                }
+            });
+            if (document.querySelector(".types-alum-slider_slim")) createSlider(".types-alum-slider_slim", 5, 30, {
+                320: {
                     slidesPerView: 1,
-                    spaceBetween: 10,
-                    autoHeight: true,
-                    speed: 800,
-                    pagination: {
-                        el: ".variants-decor-page__navigation .variants-decor-page__fraction",
-                        type: "bullets",
-                        clickable: true
-                    },
-                    on: {}
-                });
-                let totalSlide = document.querySelectorAll(".variants-decor-page__slider .swiper-slide").length;
-                let totalSlidesElement = document.querySelector(".variants-decor-page__paggination .variants-decor-page__quantity_total");
-                let tdx = totalSlide < 10 ? "0" + totalSlide : totalSlide;
-                totalSlidesElement.innerHTML = tdx;
-                homeSlider.on("slideChange", (function() {
-                    let fragment = document.querySelector(".variants-decor-page__paggination .variants-decor-page__quantity_current");
-                    let current = homeSlider.realIndex + 1;
-                    if (current > totalSlide) current = 1;
-                    let idx = current < 10 ? "0" + current : current;
-                    fragment.innerHTML = idx;
-                }));
-            }
+                    spaceBetween: 0,
+                    autoHeight: true
+                },
+                768: {
+                    slidesPerView: 5,
+                    spaceBetween: 20
+                },
+                992: {
+                    spaceBetween: 20
+                },
+                1200: {
+                    spaceBetween: 30
+                }
+            });
             createImgSlider();
             if (window.innerWidth <= 768) createPlatbandSlider();
             createHeroWideSlider();
             otherOpeningSystemsSlider();
             tabsOtherSystSlider();
         }));
-        window.addEventListener("resize", (function(e) {
-            const vw = Math.max(document.documentElement.clientWidth);
+        window.addEventListener("resize", (function() {
             if (window.innerWidth <= 768 && document.querySelector(".other-alum-doors")) createSlider(".other-alum-doors", 4, 20, {
                 320: {
                     slidesPerView: 2,
@@ -9399,161 +9252,9 @@
                 }
             });
             if (window.innerWidth <= 768 && document.querySelector(".capture-mechanism-section")) createSlider(".capture-mechanism-section", "auto", 10, {});
+            if (document.querySelector(".variants-decor-page") && window.innerWidth <= 768) createSlider(".variants-decor-page", 1, 10, {});
             if (window.innerWidth <= 768 && document.querySelector(".home-doors")) createSlider(".home-doors", "auto", 10, {});
-            if (vw >= 768 && document.querySelector(".slider-home-section__slider")) {
-                const homeSlider = new core(".slider-home-section__slider", {
-                    modules: [ Navigation, Pagination ],
-                    observer: true,
-                    observeParents: true,
-                    slidesPerView: 4,
-                    spaceBetween: 0,
-                    autoHeight: true,
-                    speed: 800,
-                    pagination: {
-                        el: ".slider-home-section__fraction",
-                        type: "bullets",
-                        clickable: true
-                    },
-                    navigation: {
-                        prevEl: ".slider-home-section__arrow_left",
-                        nextEl: ".slider-home-section__arrow_right"
-                    },
-                    on: {}
-                });
-                let totalSlide = document.querySelectorAll(".slider-home-section__slider .swiper-slide").length;
-                let totalSlidesElement = document.querySelector(".slider-home-section__quantity_total");
-                let tdx = totalSlide < 10 ? "0" + totalSlide : totalSlide;
-                totalSlidesElement.innerHTML = tdx;
-                homeSlider.on("slideChange", (function() {
-                    let fragment = document.querySelector(".slider-home-section__quantity_current");
-                    let current = homeSlider.realIndex + 1;
-                    if (current > totalSlide) current = 1;
-                    let idx = current < 10 ? "0" + current : current;
-                    fragment.innerHTML = idx;
-                }));
-            }
-            if (document.querySelector(".types-alum-slider_invisible .swiper")) {
-                const homeSlider = new core(".types-alum-slider_invisible .swiper", {
-                    modules: [ Navigation, Pagination ],
-                    slidesPerView: 5,
-                    spaceBetween: 30,
-                    spaceBetween: 0,
-                    autoHeight: true,
-                    speed: 800,
-                    pagination: {
-                        el: ".types-alum-slider_invisible .types-alum-slider__fraction",
-                        type: "bullets",
-                        clickable: true
-                    },
-                    navigation: {
-                        prevEl: ".types-alum-slider_invisible .types-alum-slider__arrow_left",
-                        nextEl: ".types-alum-slider_invisible .types-alum-slider__arrow_right"
-                    },
-                    breakpoints: {
-                        320: {
-                            slidesPerView: 1,
-                            spaceBetween: 0,
-                            autoHeight: true
-                        },
-                        768: {
-                            slidesPerView: 5,
-                            spaceBetween: 20
-                        },
-                        992: {
-                            spaceBetween: 20
-                        },
-                        1200: {
-                            spaceBetween: 30
-                        }
-                    },
-                    on: {}
-                });
-                let totalSlide = document.querySelectorAll(".types-alum-slider_invisible .swiper-slide").length;
-                let totalSlidesElement = document.querySelector(".types-alum-slider_invisible .types-alum-slider__quantity_total");
-                let tdx = totalSlide < 10 ? "0" + totalSlide : totalSlide;
-                totalSlidesElement.innerHTML = tdx;
-                homeSlider.on("slideChange", (function() {
-                    let fragment = document.querySelector(".types-alum-slider_invisible .types-alum-slider__quantity_current");
-                    let current = homeSlider.realIndex + 1;
-                    if (current > totalSlide) current = 1;
-                    let idx = current < 10 ? "0" + current : current;
-                    fragment.innerHTML = idx;
-                }));
-            }
-            if (document.querySelector(".types-alum-slider_slim .swiper")) {
-                const homeSlider = new core(".types-alum-slider_slim .swiper", {
-                    modules: [ Navigation, Pagination ],
-                    slidesPerView: 5,
-                    spaceBetween: 30,
-                    spaceBetween: 0,
-                    autoHeight: true,
-                    speed: 800,
-                    pagination: {
-                        el: ".types-alum-slider_slim .types-alum-slider__fraction",
-                        type: "bullets",
-                        clickable: true
-                    },
-                    navigation: {
-                        prevEl: ".types-alum-slider_slim .types-alum-slider__arrow_left",
-                        nextEl: ".types-alum-slider_slim .types-alum-slider__arrow_right"
-                    },
-                    breakpoints: {
-                        320: {
-                            slidesPerView: 1,
-                            spaceBetween: 0,
-                            autoHeight: true
-                        },
-                        768: {
-                            slidesPerView: 5,
-                            spaceBetween: 20
-                        },
-                        992: {
-                            spaceBetween: 20
-                        },
-                        1200: {
-                            spaceBetween: 30
-                        }
-                    },
-                    on: {}
-                });
-                let totalSlide = document.querySelectorAll(".types-alum-slider_slim .swiper-slide").length;
-                let totalSlidesElement = document.querySelector(".types-alum-slider_slim .types-alum-slider__quantity_total");
-                let tdx = totalSlide < 10 ? "0" + totalSlide : totalSlide;
-                totalSlidesElement.innerHTML = tdx;
-                homeSlider.on("slideChange", (function() {
-                    let fragment = document.querySelector(".types-alum-slider_slim .types-alum-slider__quantity_current");
-                    let current = homeSlider.realIndex + 1;
-                    if (current > totalSlide) current = 1;
-                    let idx = current < 10 ? "0" + current : current;
-                    fragment.innerHTML = idx;
-                }));
-            }
-            if (document.querySelector(".variants-decor-page .swiper") && window.innerWidth <= 768) {
-                const homeSlider = new core(".variants-decor-page .swiper", {
-                    modules: [ Navigation, Pagination ],
-                    slidesPerView: 1,
-                    spaceBetween: 10,
-                    autoHeight: true,
-                    speed: 800,
-                    pagination: {
-                        el: ".variants-decor-page__navigation .variants-decor-page__fraction",
-                        type: "bullets",
-                        clickable: true
-                    },
-                    on: {}
-                });
-                let totalSlide = document.querySelectorAll(".variants-decor-page__slider .swiper-slide").length;
-                let totalSlidesElement = document.querySelector(".variants-decor-page__paggination .variants-decor-page__quantity_total");
-                let tdx = totalSlide < 10 ? "0" + totalSlide : totalSlide;
-                totalSlidesElement.innerHTML = tdx;
-                homeSlider.on("slideChange", (function() {
-                    let fragment = document.querySelector(".variants-decor-page__paggination .variants-decor-page__quantity_current");
-                    let current = homeSlider.realIndex + 1;
-                    if (current > totalSlide) current = 1;
-                    let idx = current < 10 ? "0" + current : current;
-                    fragment.innerHTML = idx;
-                }));
-            }
+            if (document.querySelector(".slider-home-section") && window.innerWidth >= 768) createSlider(".slider-home-section", 4, 0, {});
             if (window.innerWidth <= 768) createPlatbandSlider();
             createHeroWideSlider();
             otherOpeningSystemsSlider();
@@ -11360,6 +11061,25 @@ PERFORMANCE OF THIS SOFTWARE.
         if (openFilterButton) openFilterButton.addEventListener("click", (() => {
             filterBody.classList.toggle("filter-active");
             bodyLock();
+        }));
+        const openDoorFilterButton = document.querySelector(".series-aside__mobile-button");
+        const closeDoorFilterButton = document.querySelector(".series-aside__close-button");
+        const doorFilterBody = document.querySelector(".series-aside__other-filters");
+        if (closeDoorFilterButton) {
+            closeDoorFilterButton.addEventListener("click", (() => {
+                doorFilterBody.classList.remove("active");
+                closeDoorFilterButton.classList.remove("active");
+            }));
+            document.body.addEventListener("click", (e => {
+                if (!e.target.closest(".series-aside__section_fixed")) {
+                    doorFilterBody.classList.remove("active");
+                    closeDoorFilterButton.classList.remove("active");
+                }
+            }));
+        }
+        if (openDoorFilterButton) openDoorFilterButton.addEventListener("click", (() => {
+            doorFilterBody.classList.add("active");
+            closeDoorFilterButton.classList.add("active");
         }));
         AOS.init({
             once: true
